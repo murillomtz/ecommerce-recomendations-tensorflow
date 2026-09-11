@@ -1,3 +1,4 @@
+import './productImages.js';
 import { UserController } from './controller/UserController.js';
 import { ProductController } from './controller/ProductController.js';
 import { ModelController } from './controller/ModelTrainingController.js';
