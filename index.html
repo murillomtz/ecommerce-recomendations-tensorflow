@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vitrine IA</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="painel-treinamento-visivel">
+
+    <div class="app-shell">
+
+        <!-- ================================================================
+             SIDEBAR
+        ================================================================= -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-mark">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+                <div>
+                    <strong>Vitrine IA</strong>
+                    <span>Recomendação inteligente</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a class="nav-item active" href="#catalogo">
+                    <i class="bi bi-grid"></i>
+                    <span>Catálogo</span>
+                </a>
+
+                <a class="nav-item" href="#usuario">
+                    <i class="bi bi-person"></i>
+                    <span>Usuário</span>
+                </a>
+
+                <button
+                    class="nav-item nav-button"
+                    type="button"
+                    onclick="document.querySelector('#showTrainingPanelBtn')?.click()"
+                >
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <span>Treinamento</span>
+                </button>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <span>TensorFlow.js</span>
+                <small>modelo local no navegador</small>
+            </div>
+
+        </aside>
+
+
+        <!-- ================================================================
+             CONTEÚDO
+        ================================================================= -->
+        <div class="content-area">
+
+            <!-- TOPBAR -->
+            <header class="topbar">
+
+                <div>
+                    <span class="eyebrow">RECOMENDAÇÃO POR CONTEÚDO</span>
+                    <h1>Produtos recomendados</h1>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <span
+                        id="trainingStatusBadge"
+                        class="status-badge status-ready"
+                    >
+                        Modelo pronto
+                    </span>
+
+                    <button
+                        id="showTrainingPanelInlineBtn"
+                        class="btn btn-outline-primary btn-sm"
+                        type="button"
+                        onclick="document.querySelector('#showTrainingPanelBtn')?.click()"
+                    >
+                        <i class="bi bi-activity"></i>
+                        Ver treinamento
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <main class="workspace">
+
+                <!-- ========================================================
+                     COLUNA LATERAL DE CONTROLES
+                ========================================================= -->
+                <section
+                    id="usuario"
+                    class="control-column"
+                >
+
+                    <div class="control-block">
+                        <span class="control-label">Usuário</span>
+
+                        <select
+                            class="form-select"
+                            id="userSelect"
+                        >
+                            <option value="">
+                                Selecione um usuário
+                            </option>
+                        </select>
+
+                        <div class="user-age-row">
+                            <span>Idade</span>
+
+                            <input
+                                type="number"
+                                class="form-control"
+                                id="userAge"
+                                disabled
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="control-block">
+
+                        <span class="control-label">
+                            Ações do modelo
+                        </span>
+
+                        <button
+                            id="trainModelBtn"
+                            class="btn btn-primary w-100"
+                        >
+                            <i class="bi bi-cpu"></i>
+                            Treinar modelo
+                        </button>
+
+                        <button
+                            disabled
+                            id="runRecommendationBtn"
+                            class="btn btn-dark w-100 mt-2"
+                        >
+                            <i class="bi bi-stars"></i>
+                            Gerar recomendações
+                        </button>
+
+                        <div class="model-status-box">
+                            <span>Status</span>
+                            <strong id="trainingProgressText">
+                                Aguardando treinamento
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="control-block">
+
+                        <button
+                            id="purchasesDiv"
+                            class="history-toggle"
+                            type="button"
+                        >
+                            <span>
+                                <i class="bi bi-database"></i>
+                                Dados de treino
+                            </span>
+
+                            <i
+                                id="purchasesArrow"
+                                class="bi bi-chevron-down"
+                            ></i>
+                        </button>
+
+                        <div
+                            id="allUsersPurchasesList"
+                            class="user-purchases-data"
+                            style="display: none;"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="control-block purchase-history-block">
+
+                        <div class="control-title-row">
+                            <span class="control-label">
+                                Compras anteriores
+                            </span>
+
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+
+                        <div
+                            id="pastPurchasesList"
+                            class="row g-2"
+                        ></div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ========================================================
+                     ÁREA PRINCIPAL
+                ========================================================= -->
+                <section
+                    id="catalogo"
+                    class="catalog-area"
+                >
+
+                    <div class="catalog-toolbar">
+
+                        <div>
+                            <span class="catalog-kicker">
+                                Vitrine personalizada
+                            </span>
+
+                            <h2>Catálogo inteligente</h2>
+                        </div>
+
+                        <span
+                            id="productCount"
+                            class="product-count"
+                        >
+                            0 produtos
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="product-grid"
+                        id="productList"
+                    ></div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- ====================================================================
+         PAINEL DE TREINAMENTO
+    ===================================================================== -->
+    <aside
+        id="trainingPanel"
+        class="training-panel"
+        aria-label="Painel de treinamento do modelo"
+    >
+
+        <div class="training-panel-header">
+
+            <div class="training-panel-title">
+
+                <div class="training-panel-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <div>
+                    <strong>Treinamento do modelo</strong>
+                    <span>Precisão e erro por época</span>
+                </div>
+
+            </div>
+
+
+            <div class="training-metrics">
+
+                <div class="training-metric">
+                    <span>Época</span>
+                    <strong id="trainingEpochMetric">--</strong>
+                </div>
+
+                <div class="training-metric">
+                    <span>Precisão</span>
+                    <strong id="trainingAccuracyMetric">--</strong>
+                </div>
+
+                <div class="training-metric">
+                    <span>Erro</span>
+                    <strong id="trainingLossMetric">--</strong>
+                </div>
+
+            </div>
+
+
+            <div class="training-panel-actions">
+
+                <button
+                    id="expandTrainingPanelBtn"
+                    class="icon-button"
+                    type="button"
+                    title="Aumentar painel"
+                    aria-label="Aumentar painel"
+                >
+                    <i class="bi bi-arrows-angle-expand"></i>
+                </button>
+
+                <button
+                    id="toggleTrainingPanelBtn"
+                    class="icon-button"
+                    type="button"
+                    title="Ocultar painel"
+                    aria-label="Ocultar painel"
+                >
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="trainingPanelBody"
+            class="training-panel-body"
+        >
+
+            <div class="training-chart-card">
+                <div class="training-chart-title">
+                    Precisão do modelo
+                </div>
+
+                <div
+                    id="graficoPrecisao"
+                    class="training-chart"
+                ></div>
+            </div>
+
+
+            <div class="training-chart-card">
+                <div class="training-chart-title">
+                    Erro de treinamento
+                </div>
+
+                <div
+                    id="graficoErro"
+                    class="training-chart"
+                ></div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <button
+        id="showTrainingPanelBtn"
+        class="show-training-panel-btn"
+        type="button"
+        aria-label="Exibir gráficos de treinamento"
+        title="Exibir gráficos de treinamento"
+    >
+        <i class="bi bi-graph-up"></i>
+        <span>Treinamento</span>
+    </button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+    <script type="module" src="./src/index.js"></script>
+
+</body>
+
+</html>

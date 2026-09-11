@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "name": "Marina Costa",
+        "age": 34,
+        "purchases": [
+            {
+                "id": 1,
+                "name": "Fones de Ouvido Sem Fio",
+                "category": "eletrônicos",
+                "price": 129.99,
+                "color": "preto"
+            },
+            {
+                "id": 2,
+                "name": "Relógio Inteligente",
+                "category": "eletrônicos",
+                "price": 199.99,
+                "color": "prata"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Lucas Ribeiro",
+        "age": 41,
+        "purchases": [
+            {
+                "id": 1,
+                "name": "Fones de Ouvido Sem Fio",
+                "category": "eletrônicos",
+                "price": 129.99,
+                "color": "preto"
+            },
+            {
+                "id": 3,
+                "name": "Caixa de Som Bluetooth",
+                "category": "eletrônicos",
+                "price": 89.99,
+                "color": "azul"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Fernanda Alves",
+        "age": 29,
+        "purchases": [
+            {
+                "id": 4,
+                "name": "Camiseta Estampada",
+                "category": "vestuário",
+                "price": 49.99,
+                "color": "vermelho"
+            },
+            {
+                "id": 5,
+                "name": "Calça Jeans Slim",
+                "category": "vestuário",
+                "price": 99.99,
+                "color": "azul"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Rafael Martins",
+        "age": 36,
+        "purchases": [
+            {
+                "id": 2,
+                "name": "Relógio Inteligente",
+                "category": "eletrônicos",
+                "price": 199.99,
+                "color": "prata"
+            },
+            {
+                "id": 3,
+                "name": "Caixa de Som Bluetooth",
+                "category": "eletrônicos",
+                "price": 89.99,
+                "color": "azul"
+            },
+            {
+                "id": 6,
+                "name": "Tênis Esportivo",
+                "category": "calçados",
+                "price": 149.99,
+                "color": "branco"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Juliana Rocha",
+        "age": 24,
+        "purchases": [
+            {
+                "id": 1,
+                "name": "Fones de Ouvido Sem Fio",
+                "category": "eletrônicos",
+                "price": 129.99,
+                "color": "preto"
+            },
+            {
+                "id": 6,
+                "name": "Tênis Esportivo",
+                "category": "calçados",
+                "price": 149.99,
+                "color": "branco"
+            },
+            {
+                "id": 5,
+                "name": "Calça Jeans Slim",
+                "category": "vestuário",
+                "price": 99.99,
+                "color": "azul"
+            }
+        ]
+    }
+]

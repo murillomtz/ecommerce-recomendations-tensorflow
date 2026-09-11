@@ -1,0 +1,702 @@
+[
+    {
+        "id": 1,
+        "name": "Fones de Ouvido Sem Fio",
+        "category": "eletrônicos",
+        "price": 129.99,
+        "color": "preto"
+    },
+    {
+        "id": 2,
+        "name": "Relógio Inteligente",
+        "category": "eletrônicos",
+        "price": 199.99,
+        "color": "prata"
+    },
+    {
+        "id": 3,
+        "name": "Caixa de Som Bluetooth",
+        "category": "eletrônicos",
+        "price": 89.99,
+        "color": "azul"
+    },
+    {
+        "id": 4,
+        "name": "Camiseta Estampada",
+        "category": "vestuário",
+        "price": 49.99,
+        "color": "branco"
+    },
+    {
+        "id": 5,
+        "name": "Calça Jeans Slim",
+        "category": "vestuário",
+        "price": 99.99,
+        "color": "azul"
+    },
+    {
+        "id": 6,
+        "name": "Tênis Esportivo",
+        "category": "calçados",
+        "price": 149.99,
+        "color": "vermelho"
+    },
+    {
+        "id": 7,
+        "name": "Sandália Casual",
+        "category": "calçados",
+        "price": 69.99,
+        "color": "bege"
+    },
+    {
+        "id": 8,
+        "name": "Boné Estiloso",
+        "category": "acessórios",
+        "price": 39.99,
+        "color": "preto"
+    },
+    {
+        "id": 9,
+        "name": "Mochila Executiva",
+        "category": "acessórios",
+        "price": 159.99,
+        "color": "cinza"
+    },
+    {
+        "id": 10,
+        "name": "Óculos de Sol",
+        "category": "acessórios",
+        "price": 89.99,
+        "color": "marrom"
+    },
+    {
+        "id": 11,
+        "name": "Teclado Mecânico RGB",
+        "category": "eletrônicos",
+        "price": 279.9,
+        "color": "preto"
+    },
+    {
+        "id": 12,
+        "name": "Mouse Gamer Sem Fio",
+        "category": "eletrônicos",
+        "price": 189.9,
+        "color": "preto"
+    },
+    {
+        "id": 13,
+        "name": "Monitor LED 24 Polegadas",
+        "category": "eletrônicos",
+        "price": 899.9,
+        "color": "preto"
+    },
+    {
+        "id": 14,
+        "name": "Webcam Full HD",
+        "category": "eletrônicos",
+        "price": 219.9,
+        "color": "preto"
+    },
+    {
+        "id": 15,
+        "name": "Carregador USB-C 65W",
+        "category": "eletrônicos",
+        "price": 149.9,
+        "color": "branco"
+    },
+    {
+        "id": 16,
+        "name": "Power Bank 20000mAh",
+        "category": "eletrônicos",
+        "price": 179.9,
+        "color": "preto"
+    },
+    {
+        "id": 17,
+        "name": "Hub USB-C 7 em 1",
+        "category": "eletrônicos",
+        "price": 229.9,
+        "color": "cinza"
+    },
+    {
+        "id": 18,
+        "name": "Suporte para Notebook",
+        "category": "eletrônicos",
+        "price": 99.9,
+        "color": "prata"
+    },
+    {
+        "id": 19,
+        "name": "Tablet 10 Polegadas",
+        "category": "eletrônicos",
+        "price": 1299.9,
+        "color": "cinza"
+    },
+    {
+        "id": 20,
+        "name": "Cabo USB-C Reforçado",
+        "category": "eletrônicos",
+        "price": 39.9,
+        "color": "preto"
+    },
+    {
+        "id": 21,
+        "name": "Camisa Polo",
+        "category": "vestuário",
+        "price": 79.9,
+        "color": "azul"
+    },
+    {
+        "id": 22,
+        "name": "Moletom com Capuz",
+        "category": "vestuário",
+        "price": 139.9,
+        "color": "cinza"
+    },
+    {
+        "id": 23,
+        "name": "Jaqueta Corta-Vento",
+        "category": "vestuário",
+        "price": 189.9,
+        "color": "preto"
+    },
+    {
+        "id": 24,
+        "name": "Bermuda Casual",
+        "category": "vestuário",
+        "price": 69.9,
+        "color": "bege"
+    },
+    {
+        "id": 25,
+        "name": "Camiseta Básica",
+        "category": "vestuário",
+        "price": 39.9,
+        "color": "branco"
+    },
+    {
+        "id": 26,
+        "name": "Calça Jogger",
+        "category": "vestuário",
+        "price": 119.9,
+        "color": "preto"
+    },
+    {
+        "id": 27,
+        "name": "Camisa Social",
+        "category": "vestuário",
+        "price": 129.9,
+        "color": "azul"
+    },
+    {
+        "id": 28,
+        "name": "Vestido Midi",
+        "category": "vestuário",
+        "price": 149.9,
+        "color": "vermelho"
+    },
+    {
+        "id": 29,
+        "name": "Saia Jeans",
+        "category": "vestuário",
+        "price": 99.9,
+        "color": "azul"
+    },
+    {
+        "id": 30,
+        "name": "Blusa de Tricô",
+        "category": "vestuário",
+        "price": 109.9,
+        "color": "bege"
+    },
+    {
+        "id": 31,
+        "name": "Tênis Casual",
+        "category": "calçados",
+        "price": 179.9,
+        "color": "branco"
+    },
+    {
+        "id": 32,
+        "name": "Tênis de Corrida",
+        "category": "calçados",
+        "price": 299.9,
+        "color": "azul"
+    },
+    {
+        "id": 33,
+        "name": "Bota Casual",
+        "category": "calçados",
+        "price": 249.9,
+        "color": "marrom"
+    },
+    {
+        "id": 34,
+        "name": "Chinelo Conforto",
+        "category": "calçados",
+        "price": 49.9,
+        "color": "preto"
+    },
+    {
+        "id": 35,
+        "name": "Sapatênis Clássico",
+        "category": "calçados",
+        "price": 199.9,
+        "color": "marrom"
+    },
+    {
+        "id": 36,
+        "name": "Sapato Social",
+        "category": "calçados",
+        "price": 229.9,
+        "color": "preto"
+    },
+    {
+        "id": 37,
+        "name": "Sandália Esportiva",
+        "category": "calçados",
+        "price": 99.9,
+        "color": "preto"
+    },
+    {
+        "id": 38,
+        "name": "Tênis Skate",
+        "category": "calçados",
+        "price": 219.9,
+        "color": "preto"
+    },
+    {
+        "id": 39,
+        "name": "Bota de Trilha",
+        "category": "calçados",
+        "price": 349.9,
+        "color": "marrom"
+    },
+    {
+        "id": 40,
+        "name": "Sapatilha Casual",
+        "category": "calçados",
+        "price": 89.9,
+        "color": "bege"
+    },
+    {
+        "id": 41,
+        "name": "Carteira Minimalista",
+        "category": "acessórios",
+        "price": 59.9,
+        "color": "preto"
+    },
+    {
+        "id": 42,
+        "name": "Cinto de Couro",
+        "category": "acessórios",
+        "price": 79.9,
+        "color": "marrom"
+    },
+    {
+        "id": 43,
+        "name": "Relógio Analógico",
+        "category": "acessórios",
+        "price": 249.9,
+        "color": "preto"
+    },
+    {
+        "id": 44,
+        "name": "Bolsa Transversal",
+        "category": "acessórios",
+        "price": 139.9,
+        "color": "bege"
+    },
+    {
+        "id": 45,
+        "name": "Mochila Urbana",
+        "category": "acessórios",
+        "price": 189.9,
+        "color": "preto"
+    },
+    {
+        "id": 46,
+        "name": "Garrafa Térmica",
+        "category": "acessórios",
+        "price": 89.9,
+        "color": "azul"
+    },
+    {
+        "id": 47,
+        "name": "Pulseira Inteligente",
+        "category": "acessórios",
+        "price": 159.9,
+        "color": "preto"
+    },
+    {
+        "id": 48,
+        "name": "Porta-Cartões",
+        "category": "acessórios",
+        "price": 49.9,
+        "color": "marrom"
+    },
+    {
+        "id": 49,
+        "name": "Guarda-Chuva Compacto",
+        "category": "acessórios",
+        "price": 69.9,
+        "color": "preto"
+    },
+    {
+        "id": 50,
+        "name": "Necessaire de Viagem",
+        "category": "acessórios",
+        "price": 59.9,
+        "color": "cinza"
+    },
+    {
+        "id": 51,
+        "name": "Air Fryer 5 Litros",
+        "category": "casa e cozinha",
+        "price": 449.9,
+        "color": "preto"
+    },
+    {
+        "id": 52,
+        "name": "Cafeteira Elétrica",
+        "category": "casa e cozinha",
+        "price": 199.9,
+        "color": "preto"
+    },
+    {
+        "id": 53,
+        "name": "Liquidificador 1200W",
+        "category": "casa e cozinha",
+        "price": 229.9,
+        "color": "vermelho"
+    },
+    {
+        "id": 54,
+        "name": "Jogo de Panelas",
+        "category": "casa e cozinha",
+        "price": 399.9,
+        "color": "preto"
+    },
+    {
+        "id": 55,
+        "name": "Kit de Facas",
+        "category": "casa e cozinha",
+        "price": 149.9,
+        "color": "preto"
+    },
+    {
+        "id": 56,
+        "name": "Panela de Pressão",
+        "category": "casa e cozinha",
+        "price": 189.9,
+        "color": "prata"
+    },
+    {
+        "id": 57,
+        "name": "Sanduicheira Grill",
+        "category": "casa e cozinha",
+        "price": 159.9,
+        "color": "preto"
+    },
+    {
+        "id": 58,
+        "name": "Balança Digital de Cozinha",
+        "category": "casa e cozinha",
+        "price": 69.9,
+        "color": "branco"
+    },
+    {
+        "id": 59,
+        "name": "Jarra de Vidro",
+        "category": "casa e cozinha",
+        "price": 59.9,
+        "color": "transparente"
+    },
+    {
+        "id": 60,
+        "name": "Conjunto de Potes",
+        "category": "casa e cozinha",
+        "price": 89.9,
+        "color": "azul"
+    },
+    {
+        "id": 61,
+        "name": "Cadeira de Escritório",
+        "category": "escritório",
+        "price": 799.9,
+        "color": "preto"
+    },
+    {
+        "id": 62,
+        "name": "Luminária de Mesa",
+        "category": "escritório",
+        "price": 119.9,
+        "color": "preto"
+    },
+    {
+        "id": 63,
+        "name": "Caderno Executivo",
+        "category": "escritório",
+        "price": 49.9,
+        "color": "preto"
+    },
+    {
+        "id": 64,
+        "name": "Kit de Canetas",
+        "category": "escritório",
+        "price": 29.9,
+        "color": "azul"
+    },
+    {
+        "id": 65,
+        "name": "Organizador de Mesa",
+        "category": "escritório",
+        "price": 59.9,
+        "color": "preto"
+    },
+    {
+        "id": 66,
+        "name": "Apoio Ergonômico para Pés",
+        "category": "escritório",
+        "price": 139.9,
+        "color": "preto"
+    },
+    {
+        "id": 67,
+        "name": "Mousepad Grande",
+        "category": "escritório",
+        "price": 69.9,
+        "color": "preto"
+    },
+    {
+        "id": 68,
+        "name": "Quadro Branco Magnético",
+        "category": "escritório",
+        "price": 189.9,
+        "color": "branco"
+    },
+    {
+        "id": 69,
+        "name": "Suporte para Monitor",
+        "category": "escritório",
+        "price": 129.9,
+        "color": "preto"
+    },
+    {
+        "id": 70,
+        "name": "Pasta Executiva",
+        "category": "escritório",
+        "price": 79.9,
+        "color": "cinza"
+    },
+    {
+        "id": 71,
+        "name": "Secador de Cabelo",
+        "category": "beleza",
+        "price": 229.9,
+        "color": "preto"
+    },
+    {
+        "id": 72,
+        "name": "Chapinha Cerâmica",
+        "category": "beleza",
+        "price": 179.9,
+        "color": "preto"
+    },
+    {
+        "id": 73,
+        "name": "Aparador de Barba",
+        "category": "beleza",
+        "price": 199.9,
+        "color": "preto"
+    },
+    {
+        "id": 74,
+        "name": "Escova Modeladora",
+        "category": "beleza",
+        "price": 149.9,
+        "color": "rosa"
+    },
+    {
+        "id": 75,
+        "name": "Espelho com LED",
+        "category": "beleza",
+        "price": 129.9,
+        "color": "branco"
+    },
+    {
+        "id": 76,
+        "name": "Kit de Pincéis",
+        "category": "beleza",
+        "price": 89.9,
+        "color": "preto"
+    },
+    {
+        "id": 77,
+        "name": "Necessaire Organizadora",
+        "category": "beleza",
+        "price": 69.9,
+        "color": "rosa"
+    },
+    {
+        "id": 78,
+        "name": "Massageador Facial",
+        "category": "beleza",
+        "price": 119.9,
+        "color": "branco"
+    },
+    {
+        "id": 79,
+        "name": "Máquina de Cortar Cabelo",
+        "category": "beleza",
+        "price": 249.9,
+        "color": "preto"
+    },
+    {
+        "id": 80,
+        "name": "Balança Corporal Digital",
+        "category": "beleza",
+        "price": 99.9,
+        "color": "preto"
+    },
+    {
+        "id": 81,
+        "name": "Halter Ajustável",
+        "category": "esporte",
+        "price": 349.9,
+        "color": "preto"
+    },
+    {
+        "id": 82,
+        "name": "Tapete de Yoga",
+        "category": "esporte",
+        "price": 89.9,
+        "color": "azul"
+    },
+    {
+        "id": 83,
+        "name": "Corda de Pular",
+        "category": "esporte",
+        "price": 49.9,
+        "color": "preto"
+    },
+    {
+        "id": 84,
+        "name": "Bola de Futebol",
+        "category": "esporte",
+        "price": 99.9,
+        "color": "branco"
+    },
+    {
+        "id": 85,
+        "name": "Garrafa Esportiva",
+        "category": "esporte",
+        "price": 59.9,
+        "color": "azul"
+    },
+    {
+        "id": 86,
+        "name": "Luvas de Academia",
+        "category": "esporte",
+        "price": 79.9,
+        "color": "preto"
+    },
+    {
+        "id": 87,
+        "name": "Faixa Elástica de Treino",
+        "category": "esporte",
+        "price": 69.9,
+        "color": "azul"
+    },
+    {
+        "id": 88,
+        "name": "Mochila Esportiva",
+        "category": "esporte",
+        "price": 159.9,
+        "color": "preto"
+    },
+    {
+        "id": 89,
+        "name": "Relógio para Corrida",
+        "category": "esporte",
+        "price": 399.9,
+        "color": "preto"
+    },
+    {
+        "id": 90,
+        "name": "Colchonete de Exercícios",
+        "category": "esporte",
+        "price": 119.9,
+        "color": "cinza"
+    },
+    {
+        "id": 91,
+        "name": "Controle Bluetooth",
+        "category": "games",
+        "price": 249.9,
+        "color": "preto"
+    },
+    {
+        "id": 92,
+        "name": "Headset Gamer",
+        "category": "games",
+        "price": 299.9,
+        "color": "preto"
+    },
+    {
+        "id": 93,
+        "name": "Teclado Gamer Compacto",
+        "category": "games",
+        "price": 329.9,
+        "color": "branco"
+    },
+    {
+        "id": 94,
+        "name": "Mousepad Gamer RGB",
+        "category": "games",
+        "price": 139.9,
+        "color": "preto"
+    },
+    {
+        "id": 95,
+        "name": "Suporte para Headset",
+        "category": "games",
+        "price": 89.9,
+        "color": "preto"
+    },
+    {
+        "id": 96,
+        "name": "Controle Arcade",
+        "category": "games",
+        "price": 449.9,
+        "color": "preto"
+    },
+    {
+        "id": 97,
+        "name": "Microfone USB Gamer",
+        "category": "games",
+        "price": 349.9,
+        "color": "preto"
+    },
+    {
+        "id": 98,
+        "name": "Cadeira Gamer",
+        "category": "games",
+        "price": 1099.9,
+        "color": "preto"
+    },
+    {
+        "id": 99,
+        "name": "Kit Gamer Teclado e Mouse",
+        "category": "games",
+        "price": 219.9,
+        "color": "preto"
+    },
+    {
+        "id": 100,
+        "name": "Luminária Pixel LED",
+        "category": "games",
+        "price": 129.9,
+        "color": "azul"
+    }
+]

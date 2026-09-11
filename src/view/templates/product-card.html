@@ -1,0 +1,42 @@
+<article class="card product-card">
+
+    <div class="card-body">
+
+        <h3 class="card-title">
+            {{name}}
+        </h3>
+
+        <span class="product-category">
+            {{category}}
+        </span>
+
+        <div class="product-info">
+
+            <div class="product-info-item">
+                <span>Preço</span>
+                <strong>{{price}}</strong>
+            </div>
+
+            <div class="product-info-item">
+                <span>Cor</span>
+                <strong>{{color}}</strong>
+            </div>
+
+        </div>
+
+        <div class="product-score">
+            <i class="bi bi-stars"></i>
+            {{score}}
+        </div>
+
+        <button
+            class="btn btn-primary btn-sm buy-now-btn"
+            data-product='{{product}}'
+        >
+            <i class="bi bi-bag-plus"></i>
+            Adicionar compra
+        </button>
+
+    </div>
+
+</article>

@@ -1,0 +1,1094 @@
+/* ==========================================================================
+   PALETA
+   ========================================================================== */
+
+:root {
+    --azul: #2563eb;
+    --azul-hover: #1d4ed8;
+    --azul-claro: #eff6ff;
+
+    --preto: #0f172a;
+    --preto-2: #111827;
+
+    --cinza-900: #1e293b;
+    --cinza-700: #475569;
+    --cinza-500: #64748b;
+    --cinza-400: #94a3b8;
+    --cinza-300: #cbd5e1;
+    --cinza-200: #e2e8f0;
+    --cinza-100: #f1f5f9;
+    --cinza-50: #f8fafc;
+
+    --branco: #ffffff;
+
+    --verde: #15803d;
+    --vermelho: #dc2626;
+
+    --sidebar: 220px;
+}
+
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background: var(--cinza-50);
+    color: var(--preto);
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* ==========================================================================
+   APP SHELL
+   ========================================================================== */
+
+.app-shell {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: var(--sidebar) 1fr;
+}
+
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+
+.sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 100;
+
+    width: var(--sidebar);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 18px 14px;
+
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 4px 6px 18px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.brand > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand strong {
+    font-size: 0.94rem;
+}
+
+.brand span {
+    color: #94a3b8;
+    font-size: 0.63rem;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    margin-top: 8px;
+}
+
+.nav-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 9px 10px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: transparent;
+    color: #cbd5e1;
+
+    font-size: 0.77rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: #1e293b;
+    color: var(--branco);
+}
+
+.nav-item.active {
+    box-shadow: inset 3px 0 0 var(--azul);
+}
+
+.nav-button {
+    text-align: left;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 10px 7px;
+
+    border-top: 1px solid #243044;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-footer span {
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.sidebar-footer small {
+    margin-top: 2px;
+
+    color: #64748b;
+    font-size: 0.58rem;
+}
+
+
+/* ==========================================================================
+   CONTEÚDO
+   ========================================================================== */
+
+.content-area {
+    grid-column: 2;
+
+    min-width: 0;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 14px 22px;
+
+    border-bottom: 1px solid var(--cinza-200);
+
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+}
+
+.topbar h1 {
+    margin: 1px 0 0;
+
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.eyebrow {
+    color: var(--azul);
+
+    font-size: 0.61rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.status-badge {
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 0.66rem;
+    font-weight: 800;
+}
+
+.status-ready {
+    background: var(--cinza-100);
+    color: var(--cinza-700);
+}
+
+.status-training {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-complete {
+    background: #dcfce7;
+    color: #166534;
+}
+
+
+/* ==========================================================================
+   WORKSPACE
+   ========================================================================== */
+
+.workspace {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    gap: 16px;
+
+    padding: 16px;
+}
+
+.control-column {
+    min-width: 0;
+}
+
+.control-block {
+    margin-bottom: 10px;
+    padding: 12px;
+
+    border: 1px solid var(--cinza-200);
+    border-radius: 12px;
+
+    background: var(--branco);
+}
+
+.control-label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--cinza-700);
+
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.form-select,
+.form-control {
+    min-height: 36px;
+
+    border-color: var(--cinza-300);
+    border-radius: 8px;
+
+    font-size: 0.78rem;
+}
+
+.user-age-row {
+    display: grid;
+    grid-template-columns: 1fr 70px;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 9px;
+
+    color: var(--cinza-500);
+    font-size: 0.72rem;
+}
+
+.model-status-box {
+    margin-top: 10px;
+    padding: 9px 10px;
+
+    border-radius: 8px;
+
+    background: var(--cinza-50);
+}
+
+.model-status-box span,
+.model-status-box strong {
+    display: block;
+}
+
+.model-status-box span {
+    color: var(--cinza-500);
+    font-size: 0.58rem;
+    text-transform: uppercase;
+}
+
+.model-status-box strong {
+    margin-top: 2px;
+
+    font-size: 0.68rem;
+    font-weight: 650;
+}
+
+.history-toggle {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 9px;
+
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--preto);
+    color: var(--branco);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.user-purchases-data {
+    max-height: 180px;
+
+    overflow-y: auto;
+
+    margin-top: 8px;
+    padding: 0 8px;
+
+    border: 1px solid var(--cinza-200);
+    border-radius: 8px;
+}
+
+.user-purchase-summary {
+    padding: 7px 0;
+
+    border-bottom: 1px solid var(--cinza-200);
+}
+
+.user-purchase-summary:last-child {
+    border-bottom: 0;
+}
+
+.user-purchase-summary h6 {
+    margin: 0 0 4px;
+
+    font-size: 0.67rem;
+}
+
+.user-purchase-summary .badge {
+    font-size: 0.56rem;
+}
+
+.control-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control-title-row i {
+    color: var(--azul);
+}
+
+
+/* ==========================================================================
+   COMPRAS
+   ========================================================================== */
+
+.purchase-item {
+    margin-bottom: 0;
+}
+
+.past-purchase {
+    position: relative;
+
+    padding: 8px 28px 8px 9px;
+
+    border: 1px solid var(--cinza-200);
+    border-radius: 8px;
+
+    background: var(--cinza-50);
+
+    cursor: pointer;
+}
+
+.past-purchase:hover {
+    border-color: #fecaca;
+    background: #fff7f7;
+}
+
+.past-purchase strong {
+    display: block;
+
+    overflow: hidden;
+
+    font-size: 0.68rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.past-purchase-meta {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--cinza-500);
+    font-size: 0.58rem;
+}
+
+.past-purchase i {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+
+/* ==========================================================================
+   CATÁLOGO
+   ========================================================================== */
+
+.catalog-area {
+    min-width: 0;
+}
+
+.catalog-toolbar {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+
+.catalog-kicker {
+    color: var(--azul);
+
+    font-size: 0.58rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.catalog-toolbar h2 {
+    margin: 1px 0 0;
+
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.product-count {
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: var(--preto);
+    color: var(--branco);
+
+    font-size: 0.62rem;
+    font-weight: 700;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.product-card {
+    min-height: 225px;
+
+    border: 1px solid var(--cinza-200);
+    border-radius: 11px;
+
+    background: var(--branco);
+
+    transition:
+        transform 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #93c5fd;
+
+    box-shadow:
+        0 9px 22px
+        rgba(37, 99, 235, 0.08);
+}
+
+.product-card .card-body {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 16px;
+}
+
+.product-card .card-title {
+    min-height: 46px;
+
+    margin: 0 0 8px;
+
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.product-category {
+    align-self: flex-start;
+
+    margin-bottom: 12px;
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: var(--azul-claro);
+    color: #1d4ed8;
+
+    font-size: 0.7rem;
+    font-weight: 750;
+    text-transform: capitalize;
+}
+
+.product-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.product-info-item span {
+    display: block;
+
+    color: var(--cinza-500);
+
+    font-size: 0.66rem;
+    text-transform: uppercase;
+}
+
+.product-info-item strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: var(--cinza-900);
+
+    font-size: 0.84rem;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-score {
+    margin-bottom: 12px;
+
+    color: var(--azul);
+
+    font-size: 0.78rem;
+    font-weight: 750;
+}
+
+.buy-now-btn {
+    margin-top: auto;
+
+    min-height: 38px;
+
+    border-radius: 8px;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   PAINEL DE TREINAMENTO
+   ========================================================================== */
+
+body.painel-treinamento-visivel .workspace {
+    padding-bottom: 330px;
+}
+
+.training-panel {
+    position: fixed;
+    left: calc(var(--sidebar) + 14px);
+    right: 14px;
+    bottom: 14px;
+    z-index: 1000;
+
+    height: 290px;
+
+    overflow: hidden;
+
+    border: 1px solid #bcd0ff;
+    border-radius: 14px;
+
+    background: var(--branco);
+
+    box-shadow:
+        0 18px 45px
+        rgba(15, 23, 42, 0.16);
+
+    transition:
+        height 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.training-panel.training-panel-expanded {
+    height: min(70vh, 680px);
+}
+
+.training-panel.training-panel-hidden {
+    pointer-events: none;
+
+    opacity: 0;
+
+    transform: translateY(calc(100% + 30px));
+}
+
+.training-panel-header {
+    min-height: 58px;
+
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) auto auto;
+    align-items: center;
+    gap: 14px;
+
+    padding: 8px 11px;
+
+    border-bottom: 1px solid #263247;
+
+    background: var(--preto);
+    color: var(--branco);
+}
+
+.training-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.training-panel-title > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.training-panel-title strong {
+    font-size: 0.76rem;
+}
+
+.training-panel-title span {
+    color: #94a3b8;
+    font-size: 0.58rem;
+}
+
+.training-panel-icon {
+    width: 32px;
+    height: 32px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 8px;
+
+    background: var(--azul);
+}
+
+.training-metrics {
+    display: flex;
+    gap: 6px;
+}
+
+.training-metric {
+    min-width: 68px;
+
+    padding: 5px 8px;
+
+    border: 1px solid #334155;
+    border-radius: 7px;
+
+    background: #1e293b;
+}
+
+.training-metric span,
+.training-metric strong {
+    display: block;
+}
+
+.training-metric span {
+    color: #94a3b8;
+
+    font-size: 0.51rem;
+    text-transform: uppercase;
+}
+
+.training-metric strong {
+    margin-top: 1px;
+
+    font-size: 0.66rem;
+}
+
+.training-panel-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.icon-button {
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid #475569;
+    border-radius: 7px;
+
+    background: #1e293b;
+    color: var(--branco);
+}
+
+.icon-button:hover {
+    background: var(--azul);
+}
+
+.training-panel-body {
+    height: calc(100% - 58px);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    padding: 8px;
+
+    background: var(--cinza-50);
+}
+
+.training-chart-card {
+    min-width: 0;
+    overflow: hidden;
+
+    border: 1px solid var(--cinza-200);
+    border-radius: 9px;
+
+    background: var(--branco);
+}
+
+.training-chart-title {
+    padding: 6px 8px 0;
+
+    color: var(--cinza-700);
+
+    font-size: 0.61rem;
+    font-weight: 800;
+}
+
+.training-chart {
+    height: calc(100% - 22px);
+}
+
+.show-training-panel-btn {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1100;
+
+    display: none;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px 12px;
+
+    border: 0;
+    border-radius: 999px;
+
+    background: var(--preto);
+    color: var(--branco);
+
+    font-size: 0.68rem;
+    font-weight: 750;
+}
+
+.show-training-panel-btn.visible {
+    display: inline-flex;
+}
+
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+    :root {
+        --sidebar: 74px;
+    }
+
+    .brand > div:last-child,
+    .nav-item span,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .brand {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .nav-item {
+        justify-content: center;
+    }
+
+    .workspace {
+        grid-template-columns: 230px minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .app-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content-area {
+        grid-column: 1;
+    }
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .training-panel {
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+
+        height: 450px;
+    }
+
+    body.painel-treinamento-visivel .workspace {
+        padding-bottom: 490px;
+    }
+
+    .training-panel-body {
+        grid-template-columns: 1fr;
+
+        overflow-y: auto;
+    }
+
+    .training-chart-card {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .topbar-actions .status-badge {
+        display: none;
+    }
+
+    .workspace {
+        padding: 10px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .training-panel-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .training-metrics {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+}
+/* ==========================================================================
+   PAGINAÇÃO DO CATÁLOGO
+   ========================================================================== */
+
+.catalog-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin-top: 14px;
+    padding: 11px 12px;
+
+    border: 1px solid var(--cinza-200);
+    border-radius: 10px;
+
+    background: var(--branco);
+}
+
+.pagination-summary {
+    color: var(--cinza-500);
+
+    font-size: 0.68rem;
+}
+
+.pagination-summary strong {
+    color: var(--preto);
+
+    font-weight: 800;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagination-pages {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.pagination-button,
+.pagination-page {
+    min-height: 31px;
+
+    border: 1px solid var(--cinza-300);
+    border-radius: 7px;
+
+    background: var(--branco);
+    color: var(--cinza-700);
+
+    font-size: 0.66rem;
+    font-weight: 700;
+
+    transition:
+        border-color 0.15s ease,
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.pagination-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+
+    padding: 5px 9px;
+}
+
+.pagination-page {
+    min-width: 31px;
+
+    padding: 5px 7px;
+}
+
+.pagination-button:hover:not(:disabled),
+.pagination-page:hover,
+.pagination-page.active {
+    border-color: var(--azul);
+
+    background: var(--azul);
+    color: var(--branco);
+}
+
+.pagination-button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.42;
+}
+
+.pagination-ellipsis {
+    padding: 0 3px;
+
+    color: var(--cinza-400);
+
+    font-size: 0.7rem;
+}
+
+
+/* No mobile empilhamos o resumo e os controles. */
+@media (max-width: 600px) {
+
+    .catalog-pagination {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .pagination-controls {
+        justify-content: space-between;
+    }
+
+    .pagination-button {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
+/* ==========================================================================
+   TAMANHO DOS CARDS DO CATÁLOGO
+   ========================================================================== */
+
+/* Desktop médio: 3 cards por linha */
+@media (max-width: 1450px) {
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Notebook / tablet horizontal: 2 cards por linha */
+@media (max-width: 1100px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celular: 1 card por linha */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        min-height: 210px;
+    }
+}
