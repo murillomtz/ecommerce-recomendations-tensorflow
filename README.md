@@ -80,7 +80,6 @@ O objetivo do projeto é demonstrar de forma prática conceitos de:
 * sistemas de recomendação com TensorFlow.js.
 
 O projeto possui finalidade educacional e foi desenvolvido para facilitar o entendimento do fluxo entre **dados, treinamento e recomendação**.
-,
 
 **Categoria: Inteligência Artificial (IA) · Machine Learning (ML)**
 
