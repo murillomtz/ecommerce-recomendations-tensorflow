@@ -80,3 +80,10 @@ O objetivo do projeto é demonstrar de forma prática conceitos de:
 * sistemas de recomendação com TensorFlow.js.
 
 O projeto possui finalidade educacional e foi desenvolvido para facilitar o entendimento do fluxo entre **dados, treinamento e recomendação**.
+,
+
+**Categoria: Inteligência Artificial (IA) · Machine Learning (ML)**
+
+## Interface e treinamento
+
+O projeto reúne a interface web do e-commerce e o fluxo de treinamento do recomendador no mesmo repositório. A interface em JavaScript exibe catálogo e histórico de compras; o treinamento usa TensorFlow.js e pode ser acompanhado com TensorFlow.js Vis. Web Workers isolam tarefas de treinamento do fluxo principal da interface.
