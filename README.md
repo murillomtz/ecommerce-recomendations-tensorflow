@@ -1,88 +1,71 @@
-# Vitrine IA — Recomendador de E-commerce
+# Ecommerce Recomendações com TensorFlow
 
-Projeto didático de **recomendação de produtos para e-commerce** utilizando **TensorFlow.js** no navegador.
+Demonstração de recomendações de produtos com uma rede neural treinada no próprio navegador. A página combina catálogo, perfis de usuários, histórico de compras e gráficos de treinamento para mostrar como dados de preferência podem ordenar sugestões.
 
-O sistema utiliza o histórico de compras dos usuários para treinar uma rede neural capaz de gerar um **score de afinidade entre o usuário e os produtos do catálogo**.
+**Categoria:** Inteligência Artificial (IA) · Machine Learning (ML) · Frontend.
 
-## Tecnologias
+## Tecnologias principais
 
-* JavaScript
-* TensorFlow.js
-* TensorFlow.js Vis
-* Web Workers
-* HTML
-* CSS
-* Bootstrap
+- JavaScript
+- TensorFlow.js 4.22
+- Web Workers
+- TensorFlow Visor
 
-## Como executar
+## O que é possível explorar
 
-```bash id="mte72g"
+- Selecionar um usuário e visualizar seu histórico de compras.
+- Consultar o catálogo de produtos carregado de arquivos JSON.
+- Treinar o modelo e acompanhar épocas, perda e acurácia na interface.
+- Solicitar recomendações e ordenar produtos pela afinidade calculada.
+- Observar a mudança das recomendações conforme o perfil selecionado.
+
+## Como o modelo funciona
+
+O treinamento transforma categoria e cor em vetores one-hot, normaliza preço e idade e combina essas características com o perfil do usuário. As compras fornecem exemplos positivos; uma amostra de produtos não comprados fornece exemplos negativos.
+
+A rede contém camadas densas com 128, 64 e 32 unidades, seguidas de uma saída sigmoid. A configuração do exemplo utiliza 100 épocas e lotes de 32. O valor de saída é usado para ordenar a afinidade entre usuário e produto.
+
+Os pesos definidos no preparo das características mudam a escala das entradas. Eles não determinam diretamente a importância que a rede aprenderá para cada atributo. As métricas sobre os dados do exemplo também não comprovam capacidade de generalização em um ecommerce real.
+
+## Arquitetura
+
+O código organiza controladores, serviços e visualizações. O treinamento roda em `src/workers/modelTrainingWorker.js`, separado da interface por Web Worker. Os arquivos `data/products.json` e `data/users.json` fornecem os dados da demonstração.
+
+Frontend, treinamento e recomendação estão neste mesmo repositório. Node.js é utilizado para servir os arquivos no desenvolvimento; não há um backend de treinamento separado nem integração com os projetos Java desta coleção.
+
+## Executar
+
+Com Node.js e npm instalados:
+
+```bash
 npm install
 npm start
 ```
 
-Depois acesse:
+O script utiliza BrowserSync na porta 3000. Se ela estiver ocupada, execute em outra porta:
 
-```text id="wtdvnd"
-http://localhost:3000
+```bash
+npx browser-sync start --server --port 4310
 ```
 
-## Funcionalidades
+Abra o endereço mostrado pelo servidor. A aplicação precisa de um servidor HTTP para carregar módulos, dados e o worker; abrir `index.html` diretamente como arquivo não é o fluxo recomendado. O TensorFlow.js é carregado por CDN e depende de acesso à internet.
 
-* seleção de usuários;
-* histórico de compras;
-* catálogo com 100 produtos;
-* treinamento da rede neural;
-* recomendações personalizadas;
-* produtos ordenados por afinidade;
-* acompanhamento de `accuracy` e `loss`;
-* gráficos de treinamento em tempo real;
-* painel de treinamento expansível e ocultável;
-* interface responsiva em PT-BR.
+## Execução das capturas
 
-## Como funciona
+A aplicação foi servida localmente na porta 4310. O modelo concluiu as 100 épocas de treinamento e a interface apresentou recomendações para um usuário selecionado. As imagens são do aplicativo em funcionamento, com os gráficos e o catálogo originais.
 
-```text id="vphiwm"
-Histórico de compras
-        ↓
-Normalização dos dados
-        ↓
-Transformação em vetores
-        ↓
-Criação dos dados de treinamento
-        ↓
-Rede Neural
-        ↓
-model.fit()
-        ↓
-Modelo treinado
-        ↓
-model.predict()
-        ↓
-Score de afinidade
-        ↓
-Recomendação
-```
+## Capturas do sistema
 
-Após o treinamento, o modelo analisa os produtos e gera um **score de afinidade**, utilizado para ordenar as recomendações.
+Capturas reais obtidas em execução local em 12/10/2026.
 
-## Objetivo
+### Página inicial
 
-O objetivo do projeto é demonstrar de forma prática conceitos de:
+![Página inicial](docs/screenshots/inicio.jpg)
 
-* Machine Learning;
-* preparação e normalização de dados;
-* redes neurais;
-* treinamento supervisionado;
-* `accuracy`;
-* `loss`;
-* predição;
-* sistemas de recomendação com TensorFlow.js.
+### Recomendações após o treinamento
 
-O projeto possui finalidade educacional e foi desenvolvido para facilitar o entendimento do fluxo entre **dados, treinamento e recomendação**.
+![Recomendações após o treinamento](docs/screenshots/recomendacoes.jpg)
 
-**Categoria: Inteligência Artificial (IA) · Machine Learning (ML)**
+## Histórico
 
-## Interface e treinamento
-
-O projeto reúne a interface web do e-commerce e o fluxo de treinamento do recomendador no mesmo repositório. A interface em JavaScript exibe catálogo e histórico de compras; o treinamento usa TensorFlow.js e pode ser acompanhado com TensorFlow.js Vis. Web Workers isolam tarefas de treinamento do fluxo principal da interface.
+Repositório criado no GitHub em **2026-09-11**. Essa data identifica a criação do repositório; não comprova o início nem a conclusão do desenvolvimento.
