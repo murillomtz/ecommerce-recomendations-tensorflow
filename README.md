@@ -52,7 +52,7 @@ Abra o endereço mostrado pelo servidor. A aplicação precisa de um servidor HT
 
 ## Execução das capturas
 
-A aplicação foi servida localmente na porta 4310. O modelo concluiu as 100 épocas de treinamento e a interface apresentou recomendações para um usuário selecionado. As imagens são do aplicativo em funcionamento, com os gráficos e o catálogo originais.
+A aplicação foi servida localmente na porta 4310. O modelo concluiu 100 épocas de treinamento e a interface apresentou recomendações para um perfil de demonstração. Em 13/10/2026 foram coletadas mais duas imagens em 1440 × 900 pixels: uma com os gráficos de precisão e erro e outra com o catálogo, após acionar Gerar recomendações. Os números nas imagens pertencem somente à execução ilustrada, não comprovam desempenho em dados externos. As imagens anteriores foram preservadas.
 
 ## Capturas do sistema
 
@@ -65,6 +65,14 @@ Capturas reais obtidas em execução local em 12/10/2026.
 ### Recomendações após o treinamento
 
 ![Recomendações após o treinamento](docs/screenshots/recomendacoes.jpg)
+
+### Treinamento no enquadramento web
+
+![Treinamento real concluído em 100 épocas](docs/screenshots/treinamento-web.jpg)
+
+### Catálogo no enquadramento web
+
+![Catálogo com recomendações do modelo](docs/screenshots/catalogo-web.jpg)
 
 ## Histórico
 
